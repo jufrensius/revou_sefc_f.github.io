@@ -31,12 +31,16 @@ function parallelogramLink() {
     parallelogramSection.classList.remove('hide');
 }
 
-// clear form
-function reset() {
-    const inputList = document.querySelectorAll('input');
-    inputList.forEach(input => {
-        input.value = ""
-    });    
+// clear input fields and the result
+function reset(formId, resultId) {
+    // const inputList = document.querySelectorAll('input');
+    // inputList.forEach(input => {
+    //     input.value = ""
+    // });
+    const form = document.getElementById(formId)
+    const parent = document.getElementById(resultId);
+    form.reset();
+    parent.removeChild(parent.firstChild);
 }
 
 // triangle formula start
@@ -47,10 +51,16 @@ function triangleArea() {
 
     // count
     area = 1/2 * base * height;
-    var result = "L = 1/2 x " + base + " x " + height + "\nL = " + area;
 
     // print the result
-    document.getElementById('result').value = result;
+    var result = `A = 1/2 x h x b <br>
+                A = 1/2 x ${base} x ${height} <br>
+                A = ${area}`;
+
+    const parent = document.getElementById('s1result1');
+    const child = document.createElement('p');
+    child.innerHTML = result;
+    parent.appendChild(child);
 }
 
 function trianglePerimeter() {
@@ -63,8 +73,14 @@ function trianglePerimeter() {
     perimeter = parseInt(side1) + parseInt(side2) + parseInt(side3);
 
     // print the result
-    var result = `K = ${side1} + ${side2} + ${side3} = ${perimeter}`;
-    document.getElementById('trianglePerimeterResult').value = result;
+    var result = `P = a + b + c <br>
+                P = ${side1} + ${side2} + ${side3} <br>
+                P = ${perimeter}`;
+
+    const parent = document.getElementById('s1result2');
+    const child = document.createElement('p');
+    child.innerHTML = result;
+    parent.appendChild(child);
 }
 // triangle formula end
 
@@ -76,10 +92,16 @@ function parallelogramArea() {
 
     // count
     area = s2n1 * s2n2;
-    var result = `L = ${s2n1} x ${s2n2} = ${area}`;
 
     // print the result
-    document.getElementById('s2result1').value = result;
+    var result = ` A = b x h <br>
+                    A = ${s2n1} x ${s2n2} <br>
+                    A = ${area}`;
+
+    const parent = document.getElementById('s2result1');
+    const child = document.createElement('p');
+    child.innerHTML = result;
+    parent.appendChild(child);
 }
 
 function parallelogramPerimeter() {
@@ -89,10 +111,16 @@ function parallelogramPerimeter() {
 
     // count
     area = 2 * (s2n3 + s2n4);
-    var result = `K = (${s2n3} + ${s2n4}) = ${area}`;
 
     // print the result
-    document.getElementById('s2result2').value = result;
+    var result = `P = 2(a + b) <br>
+                    P = (${s2n3} + ${s2n4}) <br>
+                    P = ${area}`;
+
+    const parent = document.getElementById('s2result2');
+    const child = document.createElement('p');
+    child.innerHTML = result;
+    parent.appendChild(child);
 }
 // parallelogram formula end
 

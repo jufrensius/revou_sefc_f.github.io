@@ -18,10 +18,8 @@
     <!-- title start-->
     <div class="center">
         <h1>Welcome to Katik</h1>
-        <p>
-            Hai Sobat, Selamat datang di katik :) <br>
-            Sebuah web apps sederhana yang berfungsi untuk menghitung nilai dan keliling bangun datar
-        </p>
+        <p><b>Hi friends, welcome to katik :)</b></p>
+        <p><small>Katik is a simple web apps that can help you to count the result of perimeter and area of 2D shapes especially Triangles and Parallelograms.</small></p>
     </div>
     <!-- title end -->
 
@@ -31,12 +29,12 @@
             <ul class="nav">
                 <li class="nav-item">
                     <a id="#triangleLink" class="nav-link" href="#" onClick="triangleLink()">
-                        Segitiga
+                        Triangle
                     </a>
                 </li>
                 <li class="nav-item">
                     <a id="parallelogramLink" class="nav-link" href="#" onClick="parallelogramLink()">
-                        Jajar Genjang
+                        Parallelogram
                     </a>
                 </li>
             </ul>
@@ -51,14 +49,14 @@
             <div class="card card-primary w-50 mx-auto">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3>Luas Segitiga</h3>
+                        <h3>Solve for Area</h3>
                     </div>
                 </div>
                 <div class="img">
                     <img src="./images/triangle-area.jpg" alt="Triangle Area Formula" width="100%">
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="s1f1">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -75,31 +73,28 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="result">Hasil:</label>
-                                    <input type="text" id="result" name="result" class="form-control" readonly>
-                                </div>
+                                <div id="s1result1"></div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info" onclick="triangleArea()">Hitung</button>
-                    <button type="reset" class="btn btn-default" onclick="reset()">Reset</button>
+                    <button type="submit" class="btn btn-info" onclick="triangleArea()">Calculate</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s1f1','s1result1')">Reset</button>
                 </div>
             </div>
 
             <div class="card card-primary w-50 mx-auto">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3>Keliling Segitiga</h3>
+                        <h3>Solve for Perimeter</h3>
                     </div>
                 </div>
                 <div class="img">
                     <img src="./images/triangle-perimeter.jpg" alt="Triangle Perimeter Formula" width="100%">
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="s1f2">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -122,17 +117,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="result">Hasil:</label>
-                                    <input type="text" id="trianglePerimeterResult" name="result" class="form-control" readonly>
-                                </div>
+                                <div id="s1result2"></div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info" onclick="trianglePerimeter()">Hitung</button>
-                    <button type="reset" class="btn btn-default" onclick="reset()">Reset</button>
+                    <button type="submit" class="btn btn-info" onclick="trianglePerimeter()">Calculate</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s1f2','s1result2')">Reset</button>
                 </div>
             </div>
         </section>
@@ -143,14 +135,14 @@
             <div class="card card-success w-50 mx-auto">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3>Luas Jajar Genjang</h3>
+                        <h3>Solve for Area</h3>
                     </div>
                 </div>
                 <div class="img">
                     <img src="./images/parallelogram-area.jpg" alt="Parallelogram Area Formula" width="100%">
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="s2f1">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -167,31 +159,28 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="s2result1">Hasil:</label>
-                                    <input type="text" id="s2result1" name="s2result1" class="form-control" readonly>
-                                </div>
+                                <div id="s2result1"></div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info" onclick="parallelogramArea()">Hitung</button>
-                    <button type="reset" class="btn btn-default" onclick="reset()">Reset</button>
+                    <button type="submit" class="btn btn-info" onclick="parallelogramArea()">Calculate</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s2f1', 's2result1')">Reset</button>
                 </div>
             </div>
 
             <div class="card card-success w-50 mx-auto">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3>Keliling Jajar Genjang</h3>
+                        <h3>Solve for Perimeter</h3>
                     </div>
                 </div>
                 <div class="img">
                     <img src="./images/parallelogram-perimeter.jpg" alt="Parallelogram Perimeter Formula" width="100%">
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="s2f2">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -208,17 +197,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="s2result2">Hasil:</label>
-                                    <input type="text" id="s2result2" name="s2result2" class="form-control" readonly>
-                                </div>
+                                <div id="s2result2"></div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info" onclick="parallelogramPerimeter()">Hitung</button>
-                    <button type="reset" class="btn btn-default" onclick="reset()">Reset</button>
+                    <button type="submit" class="btn btn-info" onclick="parallelogramPerimeter()">Calculate</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s2f2', 's2result2')">Reset</button>
                 </div>
             </div>
         </section>

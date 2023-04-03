@@ -164,3 +164,13 @@ label {
     border-color: #ddd;
     color: #444;
 }
+/* mobile view */
+@media (max-width: 768px) {
+    * {
+        margin: 2px;
+        padding: 2px;
+    }
+    .w-50 {
+        width: 100%;
+    }
+}
