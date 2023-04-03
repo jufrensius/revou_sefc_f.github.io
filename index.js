@@ -1,11 +1,11 @@
 // links
 function triangleLink() {
     // links
-    // const triangleLink = document.getElementById('triangleLink');
-    // const parallelogramLink = document.getElementById('parallelogramLink');
-
-    // parallelogramLink.classList.remove('active');
-    // triangleLink.classList.add('active');
+    const triangleLink = document.getElementById('triangleLink');
+    const parallelogramLink = document.getElementById('parallelogramLink');
+    
+    triangleLink.classList.add('active');
+    parallelogramLink.classList.remove('active');
 
     // sections
     const triangleSection = document.getElementById('triangleSection');
@@ -17,15 +17,15 @@ function triangleLink() {
 
 function parallelogramLink() {
     // links
-    // const triangleLink = document.getElementById('triangleLink');
-    // const parallelogramLink = document.getElementById('parallelogramLink');
+    const triangleLink = document.getElementById('triangleLink');
+    const parallelogramLink = document.getElementById('parallelogramLink');
+    
+    parallelogramLink.classList.add('active');
+    triangleLink.classList.remove('active');
 
     // sections
     const triangleSection = document.getElementById('triangleSection');
     const parallelogramSection = document.getElementById('parallelogramSection');
-
-    // triangleLink.classList.remove('active');
-    // parallelogramLink.classList.add('active');
 
     triangleSection.classList.add('hide');
     parallelogramSection.classList.remove('hide');
@@ -33,14 +33,15 @@ function parallelogramLink() {
 
 // clear input fields and the result
 function reset(formId, resultId) {
-    // const inputList = document.querySelectorAll('input');
-    // inputList.forEach(input => {
-    //     input.value = ""
-    // });
+    // get ids
     const form = document.getElementById(formId)
     const parent = document.getElementById(resultId);
+    
+    // reset
     form.reset();
-    parent.removeChild(parent.firstChild);
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
 
 // triangle formula start
@@ -110,12 +111,13 @@ function parallelogramPerimeter() {
     var s2n4 = document.getElementById('s2n4').value;
 
     // count
-    area = 2 * (s2n3 + s2n4);
+    // perimeter = 2 * ();
+    perimeter = 2 * (parseInt(s2n3) + parseInt(s2n4));
 
     // print the result
-    var result = `P = 2(a + b) <br>
-                    P = (${s2n3} + ${s2n4}) <br>
-                    P = ${area}`;
+    var result = `P = 2 x (a + b) <br>
+                    P = 2 x (${s2n3} + ${s2n4}) <br>
+                    P = ${perimeter}`;
 
     const parent = document.getElementById('s2result2');
     const child = document.createElement('p');

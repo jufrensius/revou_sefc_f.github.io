@@ -15,25 +15,17 @@
     <!-- script end -->
 </head>
 <body>
-    <!-- title start-->
-    <div class="center">
-        <h1>Welcome to Katik</h1>
-        <p><b>Hi friends, welcome to katik :)</b></p>
-        <p><small>Katik is a simple web apps that can help you to count the result of perimeter and area of 2D shapes especially Triangles and Parallelograms.</small></p>
-    </div>
-    <!-- title end -->
-
     <!-- header / navbar start -->
-    <header>
+    <header class="sticky-top">
         <nav>
             <ul class="nav">
                 <li class="nav-item">
-                    <a id="#triangleLink" class="nav-link" href="#" onClick="triangleLink()">
+                    <a id="triangleLink" class="active nav-link" href="#triangleSection" onClick="triangleLink()">
                         Triangle
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a id="parallelogramLink" class="nav-link" href="#" onClick="parallelogramLink()">
+                    <a id="parallelogramLink" class="nav-link" href="#parallelogramSection" onClick="parallelogramLink()">
                         Parallelogram
                     </a>
                 </li>
@@ -41,6 +33,14 @@
         </nav>        
     </header>
     <!-- header / navbar end -->
+
+    <!-- title start-->
+    <div class="title">
+        <h1>Welcome to Katik</h1>
+        <p><b>Hi friends, welcome to katik :)</b></p>
+        <p><small>Katik is a simple web apps that can help you to count the result of perimeter and area of 2D shapes especially Triangles and Parallelograms.</small></p>
+    </div>
+    <!-- title end -->
 
     <!-- main page start-->
     <main>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="./images/triangle-area.jpg" alt="Triangle Area Formula" width="100%">
+                    <img src="./images/triangle-area.jpg" alt="Triangle Area Formula" width="50%">
                 </div>
                 <div class="card-body">
                     <form id="s1f1">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="./images/triangle-perimeter.jpg" alt="Triangle Perimeter Formula" width="100%">
+                    <img src="./images/triangle-perimeter.jpg" alt="Triangle Perimeter Formula" width="50%">
                 </div>
                 <div class="card-body">
                     <form id="s1f2">
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="./images/parallelogram-area.jpg" alt="Parallelogram Area Formula" width="100%">
+                    <img src="./images/parallelogram-area.jpg" alt="Parallelogram Area Formula" width="50%">
                 </div>
                 <div class="card-body">
                     <form id="s2f1">
@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="./images/parallelogram-perimeter.jpg" alt="Parallelogram Perimeter Formula" width="100%">
+                    <img src="./images/parallelogram-perimeter.jpg" alt="Parallelogram Perimeter Formula" width="50%">
                 </div>
                 <div class="card-body">
                     <form id="s2f2">
@@ -213,8 +213,8 @@
     <!-- main page end -->
 
     <!-- footer start -->
-    <footer>
-        Copyright 2023 Jufrensius
+    <footer class="footer sticky-bottom">
+        <p>Copyright &copy;2023 Jufrensius A. Barasa. All rights reserved</p>
     </footer>
     <!-- footer end -->
 
