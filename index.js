@@ -46,83 +46,118 @@ function reset(formId, resultId) {
 
 // triangle formula start
 function triangleArea() {
-    // get values
-    var base = document.getElementById('base').value;
-    var height = document.getElementById('height').value;
+    try {
+        // get values
+        var base = parseFloat(document.getElementById('base').value);
+        var height = parseFloat(document.getElementById('height').value);
 
-    // count
-    area = 1/2 * base * height;
+        // check for invalid input
+        if (isNaN(base) || isNaN(height)) {
+            throw new Error('This field is required!')
+        }
 
-    // print the result
-    var result = `A = 1/2 x h x b <br>
-                A = 1/2 x ${base} x ${height} <br>
-                A = ${area}`;
+        // count
+        area = 1/2 * base * height;
 
-    const parent = document.getElementById('s1result1');
-    const child = document.createElement('p');
-    child.innerHTML = result;
-    parent.appendChild(child);
+        // print the result
+        var result = `A = 1/2 x h x b <br>
+                    A = 1/2 x ${base} x ${height} <br>
+                    A = ${area}`;
+
+        const parent = document.getElementById('s1result1');
+        const child = document.createElement('p');
+        child.innerHTML = result;
+        parent.appendChild(child);
+    } catch (error) {
+        alert(error.message);
+    }
 }
 
 function trianglePerimeter() {
-    // get the values
-    var side1  = document.getElementById('side1').value;
-    var side2  = document.getElementById('side2').value;
-    var side3  = document.getElementById('side3').value;
+    try {
+        // get the values
+        var side1  = parseFloat(document.getElementById('side1').value);
+        var side2  = parseFloat(document.getElementById('side2').value);
+        var side3  = parseFloat(document.getElementById('side3').value);
 
-    // count
-    perimeter = parseInt(side1) + parseInt(side2) + parseInt(side3);
+        // check for invalid input
+        if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+            throw new Error("This field is required!");
+        }
 
-    // print the result
-    var result = `P = a + b + c <br>
-                P = ${side1} + ${side2} + ${side3} <br>
-                P = ${perimeter}`;
+        // count
+        perimeter = parseInt(side1) + parseInt(side2) + parseInt(side3);
 
-    const parent = document.getElementById('s1result2');
-    const child = document.createElement('p');
-    child.innerHTML = result;
-    parent.appendChild(child);
+        // print the result
+        var result = `P = a + b + c <br>
+                    P = ${side1} + ${side2} + ${side3} <br>
+                    P = ${perimeter}`;
+
+        const parent = document.getElementById('s1result2');
+        const child = document.createElement('p');
+        child.innerHTML = result;
+        parent.appendChild(child);
+    } catch (error) {
+        alert(error.message);
+    }
 }
 // triangle formula end
 
 // parallelogram formula start
 function parallelogramArea() {
-    // get the values
-    var s2n1 = document.getElementById('s2n1').value;
-    var s2n2 = document.getElementById('s2n2').value;
+    try {
+        // get the values
+        var s2n1 = parseFloat(document.getElementById('s2n1').value);
+        var s2n2 = parseFloat(document.getElementById('s2n2').value);
 
-    // count
-    area = s2n1 * s2n2;
+        // check for invalid input
+        if (isNaN(s2n1) || isNaN(s2n2)) {
+            throw new Error("This field is required!");
+        }
+        
+        // count
+        area = s2n1 * s2n2;
 
-    // print the result
-    var result = ` A = b x h <br>
-                    A = ${s2n1} x ${s2n2} <br>
-                    A = ${area}`;
+        // print the result
+        var result = ` A = b x h <br>
+                        A = ${s2n1} x ${s2n2} <br>
+                        A = ${area}`;
 
-    const parent = document.getElementById('s2result1');
-    const child = document.createElement('p');
-    child.innerHTML = result;
-    parent.appendChild(child);
+        const parent = document.getElementById('s2result1');
+        const child = document.createElement('p');
+        child.innerHTML = result;
+        parent.appendChild(child);
+    } catch (error) {
+        alert(error.message);
+    }
 }
 
 function parallelogramPerimeter() {
-    // get the values
-    var s2n3 = document.getElementById('s2n3').value;
-    var s2n4 = document.getElementById('s2n4').value;
+    try {
+        // get the values
+        var s2n3 = document.getElementById('s2n3').value;
+        var s2n4 = document.getElementById('s2n4').value;
 
-    // count
-    // perimeter = 2 * ();
-    perimeter = 2 * (parseInt(s2n3) + parseInt(s2n4));
+        // check for invalid input
+        if (isNaN(s2n3) || isNaN(s2n4)) {
+            throw new Error("This field is required!");
+        }
 
-    // print the result
-    var result = `P = 2 x (a + b) <br>
-                    P = 2 x (${s2n3} + ${s2n4}) <br>
-                    P = ${perimeter}`;
+        // count
+        perimeter = 2 * (parseInt(s2n3) + parseInt(s2n4));
 
-    const parent = document.getElementById('s2result2');
-    const child = document.createElement('p');
-    child.innerHTML = result;
-    parent.appendChild(child);
+        // print the result
+        var result = `P = 2 x (a + b) <br>
+                        P = 2 x (${s2n3} + ${s2n4}) <br>
+                        P = ${perimeter}`;
+
+        const parent = document.getElementById('s2result2');
+        const child = document.createElement('p');
+        child.innerHTML = result;
+        parent.appendChild(child);
+    } catch (error) {
+        alert(error.message);
+    }
 }
 // parallelogram formula end
 
